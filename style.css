@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Krona One', sans-serif;
+}
+
+header {
+    position: relative;
+    background: linear-gradient(rgba(4,9,30,.7), rgba(4,9,30,.7)),url('./image/eduford_img/banner.png') top center / cover no-repeat;
+    min-height: 100vh;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 6%;
+    align-items: center;
+}
+
+
+ul li {
+    display: inline-block;
+    padding: 24px;
+    position: relative;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+nav ul li::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: aqua;
+    display: block;
+    margin: auto;
+    transition: .5s;
+}
+nav ul li:hover::after {
+    width: 100%;
+}
+
+
+.logo {
+    width: 13%;
+    cursor: pointer;
+}
+.text {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    /* top: 43%;
+    left: 24%; */
+}
+
+.text .heading {
+    font-size: 70px;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 80px;
+}
+
+.text .des {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    opacity: .7;
+    margin: 10px 0 40px;
+}
+
+.des2 {
+    display: inline-block;
+    margin-top: 65px;
+    text-decoration: none;
+    padding: 12px 34px;
+    border: 1px solid #fff;
+    background: transparent;   /*Trong suốt*/
+    font-size: 15px;
+    position: relative;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.des2:hover {
+    border: 1px solid #f44366;
+    background-color: rgb(238, 91, 91);
+}
+nav .fa {
+    display: none;
+}
+/* Responsive header */
+@media(max-width: 700px) {
+    .text .heading {
+        font-size: 30px;
+    }
+    nav ul li {
+        display: block;
+
+    }
+    nav {
+        position: absolute;
+        background: rgb(235, 112, 112);
+        width: 283px;
+        height: 100vh;
+        top: 0;
+        right: 0;
+        text-align: left;
+        z-index: 2;
+    }
+    nav .fa {
+        display: block;
+    }
+}
